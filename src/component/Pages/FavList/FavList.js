@@ -6,7 +6,6 @@ class FavList extends Component{
     render(){
         return(
             <div>
-                <div>this is favlist</div>
                 <BearList filter={true} />
             </div>
         )

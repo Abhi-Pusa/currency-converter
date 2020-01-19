@@ -2,8 +2,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
-export default () => {
+export default (props) => {
+    const {size,color} = props;
     return(
-        <FontAwesomeIcon size='2x' icon={faHeart} />
+        <FontAwesomeIcon icon={faHeart} size={size} color={color} />
     )
 }

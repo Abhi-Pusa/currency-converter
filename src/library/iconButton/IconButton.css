@@ -1,0 +1,17 @@
+.btn-icons{
+    background: #ffcccc;
+    padding: 10px;
+    border-radius: 3px;
+}
+.btn-icons-modal{
+    background: white;
+    padding: 10px;
+    border-radius: 3px;
+    border: 0px;
+    position: absolute;
+    right: 17px;
+    top: 17px;
+}
+.btn-icons:hover{
+    background: #f2f2f2;
+}

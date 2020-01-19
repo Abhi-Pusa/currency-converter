@@ -1,0 +1,16 @@
+ul{
+    background: brown;
+    margin:5px;
+    border-radius: 3px;
+}
+li{
+    display: inline-block;
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.active{
+    border-bottom: 3px solid black;
+}

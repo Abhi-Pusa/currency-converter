@@ -5,7 +5,7 @@ export default (props) => {
     let {src,children} = props;
     return(
         <div>
-            <div>
+            <div className="paper-image-container">
                 <img className="paper-image" src={src} />
             </div>
             <div>

@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import {fetchBearList,setFavoriteFlag,unsetFavoriteFlag,setModaldata} from '../../../data/actions/actions';
 import Paper from '../../../library/paper/paper';
 import IconButton from '../../../library/iconButton/IconButton';
+import BearDetails from '../BearDetails/BearDetails';
+import './BearList.css';
 
 class BearList extends Component{
     componentDidMount(){
@@ -14,14 +16,14 @@ class BearList extends Component{
     }
     modalhandler(bearItem){
         //console.log('modal handler called',bearItem);
-        let content = this.getModalContent();
+        let content = this.getModalContent(bearItem);
         this.props.setModaldata(true,content);
     }
-    getModalContent(){
-        console.log('modal content function creator');
+    getModalContent(bearItem){
+        console.log('modal content function creator',bearItem);
         return(
             <div>
-                this is the content of modal set as state
+                <BearDetails item={bearItem} />
             </div>
         )
     }
@@ -31,16 +33,18 @@ class BearList extends Component{
             return !filter || bear.favFlag;
         });
         return(
-            <div>
+            <div className="bear-list-container">
                 {dispList && dispList.map((bearItem,key)=>{
                     const iconStyle = bearItem.favFlag?'solidHeart':'regularHeart';
                     return(
-                        <div key={bearItem.id}>
+                        <div className="catalogue-wrapper" key={bearItem.id}>
                             <Paper src={bearItem.image_url} >
                                 <div>
-                                    <div>{bearItem.name}</div>
-                                    <div><IconButton iconType={iconStyle} clickHander={() => this.onClickHandler(bearItem.id,bearItem.favFlag)} /></div>
-                                    <div><IconButton iconType='plus' clickHander={() => this.modalhandler(bearItem)} /></div>
+                                    <div className="item-tag">{bearItem.name}</div>
+                                    <div className="icon-container">
+                                        <div className="icon-btn"><IconButton iconType={iconStyle} size='2x' clsName="btn-icons" color='#ff0066' clickHander={() => this.onClickHandler(bearItem.id,bearItem.favFlag)} /></div>
+                                        <div className="icon-btn"><IconButton iconType='plus' size='2x' clsName="btn-icons" color='#0047b3' clickHander={() => this.modalhandler(bearItem)} /></div>
+                                    </div>
                                 </div>
                             </Paper>
                         </div>

@@ -1,4 +1,13 @@
 .paper-image{
-    height:50px;
-    width:50px;
+    height: 200;
+    width: 80;
+    padding: 17px 0px;
+}
+.paper-image-container{
+    background:#e6e6e6;
+}
+.paper-image:hover{
+    height:210px;
+    width: 90px;
+    transition: all 0.2s ease;
 }
