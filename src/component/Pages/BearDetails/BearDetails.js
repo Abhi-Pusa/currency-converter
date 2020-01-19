@@ -5,9 +5,9 @@ import ClConfig from '../../../constant/clContentMap';
 class BearDetails extends Component{
     getFieldList(prop,value){
             return(
-                <div key={Math.random()}>
-                    <div>{ClConfig[prop]}</div>
-                    <div>{value}</div>
+                <div className="info-block" key={Math.random()}>
+                    <div className="info-label">{ClConfig[prop]}</div>
+                    <div className="info-value">{value}</div>
                 </div>
             )
     }
@@ -20,16 +20,14 @@ class BearDetails extends Component{
         }
         return(
             <div className="bear-details-container">
-                <div className="bear-details-head">bear details</div>
+                <div className="bear-details-head">Bear Information</div>
                 <div className="bear-details-content">
-                    <div style={{flex:1}}>
+                    <div className="bear-img-wrapper">
                         <img className="bear-details-img" src={item.image_url} alt="bear image"/>
                     </div>
-                    <div styles={{flex:3}}>
+                    <div className="bear-content-wrapper">
                         {content}
                     </div>
-                    
-                    
                 </div>
             </div>
         )

@@ -1,9 +1,9 @@
 import React from 'react';
 import './IconButton.css';
-import SolidIcon from './SolidIcon';
-import RegularIcon from './RegularIcon';
-import PlusIcon from './Plus';
-import CloseIcon from './Close'; 
+import SolidIcon from '../IconTypes/SolidIcon';
+import RegularIcon from '../IconTypes/RegularIcon';
+import PlusIcon from '../IconTypes/Plus';
+import CloseIcon from '../IconTypes/Close'; 
 
 const buttonMap = {
     'solidHeart': SolidIcon,

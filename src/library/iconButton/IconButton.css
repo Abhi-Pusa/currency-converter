@@ -1,7 +1,8 @@
 .btn-icons{
-    background: #ffcccc;
+    background: #ffe6e6;
     padding: 10px;
     border-radius: 3px;
+    border: 1px solid #ff1a1a;
 }
 .btn-icons-modal{
     background: white;

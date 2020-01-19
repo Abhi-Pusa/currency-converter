@@ -15,12 +15,10 @@ class BearList extends Component{
         !flag ? this.props.setFavoriteFlag(id):this.props.unsetFavoriteFlag(id);
     }
     modalhandler(bearItem){
-        //console.log('modal handler called',bearItem);
         let content = this.getModalContent(bearItem);
         this.props.setModaldata(true,content);
     }
     getModalContent(bearItem){
-        console.log('modal content function creator',bearItem);
         return(
             <div>
                 <BearDetails item={bearItem} />
