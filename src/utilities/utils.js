@@ -6,7 +6,7 @@ export const handleActions = (handlers, defaultState) => (state = defaultState, 
 }
 
 export const computeCurrencyConversion = (fromCurVal, toCurVal, amount) => {
-    return ((amount / fromCurVal) * toCurVal);
+    return Math.round(((amount / fromCurVal) * toCurVal) * 100) / 100;;
 }
 
 export const checkDecimalNumber = (value) => {
