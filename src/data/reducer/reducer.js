@@ -1,15 +1,13 @@
 import {defaultState} from '../../store/state';
 import { handleActions } from '../../utilities/utils';
 import {
-    SET_BEAR_LIST,
+    SET_CURRENT_CURRENCY_RATES,
     SET_LOADING_STATUS,
-    SET_FAV_FLAG,
-    UNSET_FAV_FLAG,
-    SET_MODAL_DATA
+    SET_ERROR_FLAG
 } from '../actions/actions';
 
-const setBearList = (state,action) => {
-    let newState = {...state,...{bearList:action.payload}};
+const setCurrentCurrencyRate = (state,action) => {
+    let newState = {...state,...{rates:action.payload}};
     return newState;
 }
 
@@ -18,39 +16,13 @@ const setLoadingStatus = (state,action) => {
     return newState;
 }
 
-const setFavoriteFlag = (state,action) => {
-    let newList = state.bearList && state.bearList.map((bear,key) => {
-        if(bear.id == action.payload){
-            bear['favFlag'] = true;
-        }
-        return bear;
-    });
-    let newState = {...state,...{bearList:newList}};
-    return newState;
-}
-
-const unsetFavoriteFlag = (state,action) => {
-    let newList = state.bearList && state.bearList.map((bear,key) => {
-        if(bear.id == action.payload){
-            bear['favFlag'] = false;
-        }
-        return bear;
-    });
-    let newState = {...state,...{bearList:newList}};
-    return newState;
-}
-
-const setModalData = (state,action) => {
-    let {status,content} = action.payload;
-    let newModal = {modal:{isOpen:status,children:content}};
-    let newState = {...state,...newModal};
+const setErrorFlag = (state,action) => {
+    let newState = {...state,...{error:action.payload}};
     return newState;
 }
 
 export default handleActions({
-    [SET_BEAR_LIST]:setBearList,
+    [SET_CURRENT_CURRENCY_RATES]:setCurrentCurrencyRate,
     [SET_LOADING_STATUS]:setLoadingStatus,
-    [SET_FAV_FLAG]:setFavoriteFlag,
-    [UNSET_FAV_FLAG]:unsetFavoriteFlag,
-    [SET_MODAL_DATA]:setModalData
+    [SET_ERROR_FLAG]:setErrorFlag
 },defaultState);

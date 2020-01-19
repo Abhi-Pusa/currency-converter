@@ -1,5 +1,5 @@
 {
-  "name": "internationproject",
+  "name": "currency_converter",
   "version": "1.0.0",
   "description": "A project based on the test provided by internation as the interview process",
   "main": "index.js",

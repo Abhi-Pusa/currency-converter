@@ -7,9 +7,9 @@
 
 
 #Functionality provided
-1. Two tabs provided - one will list all the bears and another will list all liked beers
-2. Navigation to both the pages can be done by clicking on one of the tabs on navigation bar.
-3. Beer catalogue list all the beers and two buttons are provided on each.
-4. Heart Shaped button - onclick of this will add/remove the bear to favourite beers list.
-5. plus shaped button - onclick of this will show more details of the page.
-6. page is made mobile compatable as well using desktop first responsive web design.
+1. It fetches all the conversion currency list from the API.
+2. Type any number Interger or decimal in the input box (any thing not a number will not work).
+3. Once typed the amount need to be converted select from Currency you want to convert.
+4. After that select the currency to which the conversion need to be done.
+5. On selecting react will calculate the conversion amount and print in the space provided between two dropdown.
+6. Also It will maintain the list of last 10 converted amount in the table below. 

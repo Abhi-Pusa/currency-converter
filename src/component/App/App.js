@@ -1,28 +1,14 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Modal from '../../library/modal/Modal';
 import './App.css';
-import { setModaldata } from '../../data/actions/actions';
-import NavBar from '../NavBar/NavBar';
+import CurrencyConverter from '../Pages/CurrencyConverter/CurrencyConverter';
 
-class App extends Component {
-    render() {
-        const {appState: {modal: { isOpen,children }} } = this.props;
+const App = () => {
         return (
             <div>
-                {isOpen?<Modal onClickHandler={this.props.setModaldata} children={children}/>:null}
-                <NavBar />
+                <h1>Currency Converter</h1>
+                <CurrencyConverter />
             </div>
         )
-    }
 }
 
-const mapStateToProps = state => state;
-
-const mapDispatchToProps = dispatch => {
-    return {
-        setModaldata:(status,content) => dispatch(setModaldata(status,content)) 
-    }
-}
-
-export default connect(mapStateToProps,mapDispatchToProps)(App);
+export default App;

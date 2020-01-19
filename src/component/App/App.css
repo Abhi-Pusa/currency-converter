@@ -1,5 +1,26 @@
 body{
-    margin: 0px;
+    margin: 20px;
     padding: 0px;
     box-sizing: border-box;
+    background-color: #4d3900;
+    color: white;
+    font-family: serif;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: serif;
+}
+option{
+    font-family: serif;
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: monospace;
+}
+input{
+    font-family: serif;
 }
