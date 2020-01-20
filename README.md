@@ -3,6 +3,7 @@
 2. cd to the folder created
 3. npm install  - to install all the dependencies
 4. npm run dev - will start webpack dev server
+5. npm run test - will run unit test cases
 5. open browser and launch url http://localhost:9000
 
 
